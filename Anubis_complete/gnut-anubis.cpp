@@ -31,7 +31,7 @@ void catch_signal(int){ cout << "Program interrupted by Ctrl-C [SIGINT,2]\n"; ex
  * MAIN
 -*/
 int main(int argc, char *argv[])
-{   
+{
   clock_t clktot = clock();
   clock_t clkxtr = clock();
   signal(SIGINT, catch_signal);
