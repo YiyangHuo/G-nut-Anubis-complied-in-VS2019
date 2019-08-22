@@ -34,6 +34,7 @@
 #endif
 
 #include "gset/gsetbase.h"
+#include <direct.h>
 
 using namespace std;
 using namespace pugi;
@@ -75,6 +76,9 @@ int t_gsetbase::read(const string& file)
   if( ! (_irc = _doc.load_file( _name.c_str() )) ){ 
 //    if( _log ) _log->comment(0, "gsetbase" , "xconfig: not file read " + _name + " " + string(_irc.description()) );
 //    else                             cerr << "xconfig: not file read " + _name + " " + string(_irc.description()) << endl;
+	char   buffer[MAX_PATH];
+	getcwd(buffer, MAX_PATH);
+	cout << buffer << endl;
     cerr << "xconfig: not file read " + _name + " " + string(_irc.description()) << endl;
     _gmutex.unlock(); return -1;
   }

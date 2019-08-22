@@ -5,6 +5,14 @@
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Inbetween|Win32">
+      <Configuration>Inbetween</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Inbetween|x64">
+      <Configuration>Inbetween</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
@@ -51,6 +59,12 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Inbetween|Win32'">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Inbetween|x64'">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -74,6 +88,10 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>C:\internship\Complete Adjustment\Anubis_complete\Anubis_complete\zlib-1.2.11;C:\internship\Complete Adjustment\Anubis_complete\Anubis_complete\src;$(IncludePath)</IncludePath>
+    <ExecutablePath>C:\internship\Complete Adjustment\Anubis_complete\Release;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Inbetween|Win32'">
+    <IncludePath>C:\internship\Complete Adjustment\Anubis_complete\Anubis_complete\src;C:\internship\Complete Adjustment\Anubis_complete\Anubis_complete\zlib-1.2.11;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -128,6 +146,11 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Inbetween|Win32'">
+    <ClCompile>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="gnut-anubis.cpp" />

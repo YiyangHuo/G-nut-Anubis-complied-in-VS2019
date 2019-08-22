@@ -7,16 +7,31 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Anubis_complete", "Anubis_c
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Inbetween|Win32 = Inbetween|Win32
+		Inbetween|x64 = Inbetween|x64
+		Inbetween|x86 = Inbetween|x86
+		Release|Win32 = Release|Win32
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1C297DD-219C-4627-9374-6F4BF03D9173}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F1C297DD-219C-4627-9374-6F4BF03D9173}.Debug|Win32.Build.0 = Debug|Win32
 		{F1C297DD-219C-4627-9374-6F4BF03D9173}.Debug|x64.ActiveCfg = Debug|x64
 		{F1C297DD-219C-4627-9374-6F4BF03D9173}.Debug|x64.Build.0 = Debug|x64
 		{F1C297DD-219C-4627-9374-6F4BF03D9173}.Debug|x86.ActiveCfg = Debug|Win32
 		{F1C297DD-219C-4627-9374-6F4BF03D9173}.Debug|x86.Build.0 = Debug|Win32
+		{F1C297DD-219C-4627-9374-6F4BF03D9173}.Inbetween|Win32.ActiveCfg = Inbetween|Win32
+		{F1C297DD-219C-4627-9374-6F4BF03D9173}.Inbetween|Win32.Build.0 = Inbetween|Win32
+		{F1C297DD-219C-4627-9374-6F4BF03D9173}.Inbetween|x64.ActiveCfg = Inbetween|x64
+		{F1C297DD-219C-4627-9374-6F4BF03D9173}.Inbetween|x64.Build.0 = Inbetween|x64
+		{F1C297DD-219C-4627-9374-6F4BF03D9173}.Inbetween|x86.ActiveCfg = Inbetween|Win32
+		{F1C297DD-219C-4627-9374-6F4BF03D9173}.Inbetween|x86.Build.0 = Inbetween|Win32
+		{F1C297DD-219C-4627-9374-6F4BF03D9173}.Release|Win32.ActiveCfg = Release|Win32
+		{F1C297DD-219C-4627-9374-6F4BF03D9173}.Release|Win32.Build.0 = Release|Win32
 		{F1C297DD-219C-4627-9374-6F4BF03D9173}.Release|x64.ActiveCfg = Release|x64
 		{F1C297DD-219C-4627-9374-6F4BF03D9173}.Release|x64.Build.0 = Release|x64
 		{F1C297DD-219C-4627-9374-6F4BF03D9173}.Release|x86.ActiveCfg = Release|Win32

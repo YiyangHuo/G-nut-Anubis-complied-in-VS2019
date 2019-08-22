@@ -1671,7 +1671,7 @@ void t_gxtrqc::_calcul(ostringstream& os)
   t_gsppflt gspp(_site, _set);  gspp.minsat(5); 
   gspp.setDAT(_gobs, _gnav);
   t_gallprod prod;
-  gspp.setOUT(&prod);
+  gspp.setOUT(&prod); //link the _allprod with the prod, modyfy one equals to modify another
   gspp.setOBJ(_gobj);
   gspp.glog(_log);
 
@@ -1688,10 +1688,10 @@ void t_gxtrqc::_calcul(ostringstream& os)
 
     // use synchronized time for clock drift in RINEX since gsppflt reports rounded values
       t_gtime tt(t); //tt.reset_dsec();    
-      shared_ptr<t_gprodcrd> prd_crd = static_pointer_cast<t_gprodcrd>( prod.get(_site, t_gdata::POS, tt) );
+      shared_ptr<t_gprodcrd> prd_crd = static_pointer_cast<t_gprodcrd>( prod.get(_site, t_gdata::POS, tt) ); //crd refers to cordinate
       shared_ptr<t_gprodclk> prd_clk = static_pointer_cast<t_gprodclk>( prod.get(_site, t_gdata::CLK, tt) );
 
-      if( prd_crd != nullptr && prd_clk != nullptr )
+      if( prd_crd != nullptr && prd_clk != nullptr )//prd_crd refers to predict coordinate
       {
         xyz = prd_crd->xyz();
         clk = prd_clk->clk();
